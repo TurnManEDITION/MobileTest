@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<section id="content_menu" class="display_none">
+		<header>
+			<img id="button_back" class="menu" src="black_back.png" alt="">
+			<div class="name_site">IsTericad</div>
+		</header>
+		<ul class="content_menu">
+			<li>
+				<a href="">Новости</a>
+			</li>
+			<li>
+				<a href="links.html">Ссылки</a>
+			</li>
+			<li>
+				<a href="downloads.html">Скачивание</a>
+			</li>
+			<li>
+				<a href="about.html">Об авторе</a>
+			</li>
+		</ul>
+	</section>
+	<section id="content" class="display_block">
+		<header>
+			<img id="button_menu" class="menu" src="black_menu.png" alt="">
+			<div class="name_site">IsTericad</div>
+		</header>
+		<h1>safdfsda</h1>
+	</section>
+	<style>
+		body {
+			background-color: rgb(255, 255, 255);
+			color: rgb(0, 0, 0);
+		}
+		header {
+			border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+			border-right: 2px solid rgba(0, 0, 0, 0.5);
+		}
+		li {
+			list-style: none;
+			text-align: center;
+			font-size: 4em;
+			margin-right: 30px;
+			border: 2px solid rgba(0, 0, 0, 0.5);
+			padding: 3px;
+			margin-bottom: 7px;
+			line-height: 2.5em;
+		}
+		li > a {
+			display: block;
+		}
+		a {
+			text-decoration: none;
+			color: rgb(0, 0, 0);
+		}
+		.menu {
+			cursor: pointer;
+			position: absolute;
+			width: 125px;
+			height: 125px;
+		}
+		.name_site {
+			text-align: right;
+			font-size: 7.5em;
+			margin-right: 0.6em;
+		}
+		.content_menu {
+
+		}
+		.display_none {
+			display: none;
+		}
+		.display_block {
+			display: block;
+		}
+	</style>
+	<script>
+		document.querySelector('#button_menu').addEventListener('click', () => {
+			document.querySelector('#content').classList.remove('display_block');
+			document.querySelector('#content').classList.add('display_none');
+			document.querySelector('#content_menu').classList.remove('display_none');
+			document.querySelector('#content_menu').classList.add('display_block');
+		})
+		document.querySelector('#button_back').addEventListener('click', () => {
+			document.querySelector('#content').classList.remove('display_none');
+			document.querySelector('#content').classList.add('display_block');
+			document.querySelector('#content_menu').classList.remove('display_block');
+			document.querySelector('#content_menu').classList.add('display_none');
+		})
+	</script>
+</body>
+</html>
